@@ -43,7 +43,6 @@ async def random_image(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         rand_image = os.path.join(image_folder,choice(images))
 
         print((f'pictname:{rand_image}'))
-        print('hello world')
 
         with open(rand_image,'rb') as photo:
             await context.bot.send_photo(update.message.chat_id,photo=photo)
